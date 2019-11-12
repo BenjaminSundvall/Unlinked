@@ -17,6 +17,6 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         var moveDirection = new Vector3(-Input.GetAxis("Vertical"), 0, Input.GetAxis("Horizontal"));
-        controller.SimpleMove(moveDirection.normalized);
+        controller.SimpleMove(speed * moveDirection.normalized);
     }
 }
